@@ -1,0 +1,16 @@
+<!--index.wxml-->
+<view>
+
+  <view class="viewBox">
+      <view class= "card" wx:for = "{{items}}" wx:key="">
+  
+          <view  data-url="{{item.url}}" bindtap = "onItemClick">
+             <image class= "image" mode="aspectFill" src="{{item.url}}" bindload='getImgSize' />
+             <view class="title">{{item.title}}</view>
+          </view>
+      
+        </view>
+  </view>
+
+</view>
+
